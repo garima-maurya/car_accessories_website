@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('autogearpro_theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (saved === 'light' || (!saved && prefersLight)) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — AutoGear Pro | Car Accessories & Parts</title>
+  <meta name="description" content="Browse AutoGear Pro's full catalog of interior, exterior, electronics and safety car accessories. Filter by category and find genuine parts fast.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- TODO: add favicon.svg once /images assets are created -->
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <span class="loader-mark">AUTOGEAR<br>PRO</span>
+    <span class="loader-bar"><span class="loader-bar-fill"></span></span>
+  </div>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">AUTOGEAR</span><span class="logo-sub">PRO</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" aria-current="page">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-widget">
+          <button class="search-toggle" id="searchToggle" type="button" aria-expanded="false" aria-controls="searchForm" aria-label="Search products">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg>
+          </button>
+          <form class="search-form" id="searchForm" role="search" action="products.html" method="get">
+            <label for="siteSearchInput" class="visually-hidden">Search products</label>
+            <input type="search" id="siteSearchInput" name="search" placeholder="Search products…" autocomplete="off">
+          </form>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.7 14.9A8.5 8.5 0 0 1 9.1 3.3a.6.6 0 0 0-.8-.8 10 10 0 1 0 13.2 13.2.6.6 0 0 0-.8-.8Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE INTRO -->
+    <section class="page-intro">
+      <p class="eyebrow">Full Catalog</p>
+      <h1>Our Car Accessories</h1>
+      <p class="page-intro-sub">Genuine interior, exterior, electronics and safety gear — filter by category to find exactly what your car needs.</p>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section" aria-labelledby="productsHeading">
+      <h2 id="productsHeading" class="visually-hidden">Product listing</h2>
+
+      <div class="filter-bar" role="group" aria-label="Filter products by category">
+        <button class="filter-btn is-active" data-category="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-category="interior" aria-pressed="false">Interior</button>
+        <button class="filter-btn" data-category="exterior" aria-pressed="false">Exterior</button>
+        <button class="filter-btn" data-category="electronics" aria-pressed="false">Electronics</button>
+        <button class="filter-btn" data-category="safety" aria-pressed="false">Safety</button>
+      </div>
+
+      <p class="visually-hidden" id="resultsAnnouncer" aria-live="polite"></p>
+
+      <div class="products-grid" id="productsGrid">
+
+        <!-- Interior -->
+        <article class="product-card reveal" data-category="interior" data-price="2500">
+          <div class="product-media" data-category="interior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M4 17V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 17h18v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2Z" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 11h8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Interior</span>
+          <h3>Premium Seat Covers</h3>
+          <p class="product-desc">Durable, waterproof seat covers for ultimate comfort and protection.</p>
+          <div class="product-footer">
+            <span class="price">₹2,500</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="interior" data-price="500">
+          <div class="product-media" data-category="interior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M4 17V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 17h18v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2Z" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 11h8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Interior</span>
+          <h3>Car Air Fresheners</h3>
+          <p class="product-desc">Long-lasting fragrances to keep your car smelling fresh.</p>
+          <div class="product-footer">
+            <span class="price">₹500</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="interior" data-price="1200">
+          <div class="product-media" data-category="interior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M4 17V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 17h18v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2Z" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 11h8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Interior</span>
+          <h3>Custom Floor Mats</h3>
+          <p class="product-desc">Non-slip, easy-to-clean mats tailored for your vehicle.</p>
+          <div class="product-footer">
+            <span class="price">₹1,200</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Exterior -->
+        <article class="product-card reveal" data-category="exterior" data-price="3000">
+          <div class="product-media" data-category="exterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="2.5" y="13" width="19" height="5" rx="1.2" stroke-linejoin="round"/>
+              <circle cx="7" cy="18.5" r="1.6"/>
+              <circle cx="17" cy="18.5" r="1.6"/>
+            </svg>
+          </div>
+          <span class="product-category">Exterior</span>
+          <h3>Portable Tyre Inflator</h3>
+          <p class="product-desc">Compact inflator for emergencies, with digital pressure gauge.</p>
+          <div class="product-footer">
+            <span class="price">₹3,000</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="exterior" data-price="4500">
+          <div class="product-media" data-category="exterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="2.5" y="13" width="19" height="5" rx="1.2" stroke-linejoin="round"/>
+              <circle cx="7" cy="18.5" r="1.6"/>
+              <circle cx="17" cy="18.5" r="1.6"/>
+            </svg>
+          </div>
+          <span class="product-category">Exterior</span>
+          <h3>Weatherproof Car Cover</h3>
+          <p class="product-desc">Protect your car from dust, rain, and UV rays.</p>
+          <div class="product-footer">
+            <span class="price">₹4,500</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="exterior" data-price="1800">
+          <div class="product-media" data-category="exterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="2.5" y="13" width="19" height="5" rx="1.2" stroke-linejoin="round"/>
+              <circle cx="7" cy="18.5" r="1.6"/>
+              <circle cx="17" cy="18.5" r="1.6"/>
+            </svg>
+          </div>
+          <span class="product-category">Exterior</span>
+          <h3>Exterior LED Lights</h3>
+          <p class="product-desc">Energy-efficient lights for enhanced visibility and style.</p>
+          <div class="product-footer">
+            <span class="price">₹1,800</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Electronics -->
+        <article class="product-card reveal" data-category="electronics" data-price="800">
+          <div class="product-media" data-category="electronics">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <rect x="5" y="3" width="14" height="18" rx="2" stroke-linejoin="round"/>
+              <path d="M9 7h6M9 11h6M9 15h3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Electronics</span>
+          <h3>Magnetic Phone Mount</h3>
+          <p class="product-desc">Secure, adjustable mount for hands-free navigation.</p>
+          <div class="product-footer">
+            <span class="price">₹800</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="electronics" data-price="1500">
+          <div class="product-media" data-category="electronics">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <rect x="5" y="3" width="14" height="18" rx="2" stroke-linejoin="round"/>
+              <path d="M9 7h6M9 11h6M9 15h3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Electronics</span>
+          <h3>Wireless Car Charger</h3>
+          <p class="product-desc">Fast-charging wireless pad compatible with all devices.</p>
+          <div class="product-footer">
+            <span class="price">₹1,500</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="electronics" data-price="5000">
+          <div class="product-media" data-category="electronics">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <rect x="5" y="3" width="14" height="18" rx="2" stroke-linejoin="round"/>
+              <path d="M9 7h6M9 11h6M9 15h3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Electronics</span>
+          <h3>HD Dash Camera</h3>
+          <p class="product-desc">Record your drives in high definition for safety and evidence.</p>
+          <div class="product-footer">
+            <span class="price">₹5,000</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Safety -->
+        <article class="product-card reveal" data-category="safety" data-price="2200">
+          <div class="product-media" data-category="safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Safety</span>
+          <h3>Advanced Car Alarm</h3>
+          <p class="product-desc">Motion-sensor alarm with remote control for added security.</p>
+          <div class="product-footer">
+            <span class="price">₹2,200</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="safety" data-price="1000">
+          <div class="product-media" data-category="safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Safety</span>
+          <h3>Emergency First Aid Kit</h3>
+          <p class="product-desc">Comprehensive kit for roadside emergencies.</p>
+          <div class="product-footer">
+            <span class="price">₹1,000</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-category="safety" data-price="600">
+          <div class="product-media" data-category="safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="product-category">Safety</span>
+          <h3>Seat Belt Extender</h3>
+          <p class="product-desc">Adjustable extender for comfortable and safe seating.</p>
+          <div class="product-footer">
+            <span class="price">₹600</span>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults" hidden>No products match this category yet. Try a different filter.</p>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <div class="cta-banner-inner">
+        <h2>Can't find what you're looking for?</h2>
+        <p>Tell us what your car needs and we'll help you track it down.</p>
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">AUTOGEAR</span><span class="logo-sub">PRO</span>
+        </a>
+        <p>Genuine parts and accessories for drivers who use their cars, not just park them.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="AutoGear Pro on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46H16.5V4.35C16.2 4.31 15.2 4.2 14 4.2c-2.4 0-4 1.46-4 4.16V10.5H7.5v3H10V21h3.5Z"/></svg>
+          </a>
+          <a href="#" aria-label="AutoGear Pro on Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.8A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1Z"/></svg>
+          </a>
+          <a href="#" aria-label="AutoGear Pro on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.7 0 3.1 0 4.1.06 1.1.05 1.9.24 2.5.5.7.28 1.2.65 1.8 1.2.5.56.9 1.1 1.2 1.8.26.6.45 1.4.5 2.5.05 1 .06 1.4.06 4.1s0 3.1-.06 4.1c-.05 1.1-.24 1.9-.5 2.5a5 5 0 0 1-1.2 1.8c-.56.5-1.1.9-1.8 1.2-.6.26-1.4.45-2.5.5-1 .05-1.4.06-4.1.06s-3.1 0-4.1-.06c-1.1-.05-1.9-.24-2.5-.5a5 5 0 0 1-1.8-1.2 5 5 0 0 1-1.2-1.8c-.26-.6-.45-1.4-.5-2.5C2 15.1 2 14.7 2 12s0-3.1.06-4.1c.05-1.1.24-1.9.5-2.5.28-.7.65-1.2 1.2-1.8.56-.5 1.1-.9 1.8-1.2.6-.26 1.4-.45 2.5-.5C8.9 2 9.3 2 12 2Zm0 1.8c-2.66 0-2.97 0-4.02.06-.9.04-1.4.2-1.7.33-.44.17-.75.38-1.08.7-.32.33-.53.64-.7 1.08-.13.3-.29.8-.33 1.7C4.1 8.9 4.1 9.21 4.1 12s0 2.97.06 4.02c.04.9.2 1.4.33 1.7.17.44.38.75.7 1.08.33.32.64.53 1.08.7.3.13.8.29 1.7.33 1.05.06 1.36.06 4.02.06s2.97 0 4.02-.06c.9-.04 1.4-.2 1.7-.33.44-.17.75-.38 1.08-.7.32-.33.53-.64.7-1.08.13-.3.29-.8.33-1.7.06-1.05.06-1.36.06-4.02s0-2.97-.06-4.02c-.04-.9-.2-1.4-.33-1.7a2.9 2.9 0 0 0-.7-1.08 2.9 2.9 0 0 0-1.08-.7c-.3-.13-.8-.29-1.7-.33C14.97 3.8 14.66 3.8 12 3.8Zm0 3.1a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 1.8a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6Zm5.3-2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Shop by Category</h3>
+        <ul>
+          <li><a href="products.html?category=interior">Interior</a></li>
+          <li><a href="products.html?category=exterior">Exterior</a></li>
+          <li><a href="products.html?category=electronics">Electronics</a></li>
+          <li><a href="products.html?category=safety">Safety</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-newsletter">
+        <h3>Stay Updated</h3>
+        <p>New arrivals and offers, once in a while — no spam.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <label for="newsletterEmail" class="visually-hidden">Email address</label>
+          <div class="newsletter-input-row">
+            <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Your email address" aria-describedby="newsletterError" required>
+            <button type="submit" class="btn btn-primary newsletter-submit">Subscribe</button>
+          </div>
+          <span class="form-error" id="newsletterError"></span>
+        </form>
+      </div>
+    </div>
+
+    <p class="footer-bottom">&copy; <span id="footerYear">2026</span> AutoGear Pro. All rights reserved.</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

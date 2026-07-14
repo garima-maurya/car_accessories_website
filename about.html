@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('autogearpro_theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (saved === 'light' || (!saved && prefersLight)) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — AutoGear Pro | Our Story, Mission &amp; Values</title>
+  <meta name="description" content="Learn how AutoGear Pro started, what drives us, and why thousands of drivers trust us for genuine car accessories and honest service.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- TODO: add favicon.svg once /images assets are created -->
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <span class="loader-mark">AUTOGEAR<br>PRO</span>
+    <span class="loader-bar"><span class="loader-bar-fill"></span></span>
+  </div>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">AUTOGEAR</span><span class="logo-sub">PRO</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-widget">
+          <button class="search-toggle" id="searchToggle" type="button" aria-expanded="false" aria-controls="searchForm" aria-label="Search products">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg>
+          </button>
+          <form class="search-form" id="searchForm" role="search" action="products.html" method="get">
+            <label for="siteSearchInput" class="visually-hidden">Search products</label>
+            <input type="search" id="siteSearchInput" name="search" placeholder="Search products…" autocomplete="off">
+          </form>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.7 14.9A8.5 8.5 0 0 1 9.1 3.3a.6.6 0 0 0-.8-.8 10 10 0 1 0 13.2 13.2.6.6 0 0 0-.8-.8Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-intro">
+      <p class="eyebrow">About AutoGear Pro</p>
+      <h1>Built By Drivers, For Drivers</h1>
+      <p class="page-intro-sub">We started as two people frustrated with low-quality car accessories. Today we're a catalog thousands of drivers trust — and the standards haven't changed.</p>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story-section">
+      <div class="story-text">
+        <p class="eyebrow">Our Story</p>
+        <h2>Started in a Garage. Still Run Like One.</h2>
+        <p>AutoGear Pro began in 2019 when our founders couldn't find seat covers that actually fit or a car cover that survived one monsoon. So they started sourcing accessories themselves — testing everything on their own cars before it ever reached a customer.</p>
+        <p>That habit never went away. Every product in our catalog is still chosen the same way: does it hold up, does it fit properly, and would we put it on our own car? If the answer isn't yes to all three, it doesn't make the cut.</p>
+      </div>
+
+      <div class="story-highlight">
+        <span class="story-badge">EST. 2019</span>
+        <p class="story-highlight-text">"We're not trying to be the biggest catalog. We're trying to be the one you don't have to double-check."</p>
+        <span class="story-highlight-meta">— AutoGear Pro Founders</span>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="mission-vision">
+      <div class="mv-card reveal">
+        <span class="mv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/>
+            <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <h3>Our Mission</h3>
+        <p>To equip every driver with genuine, reliable accessories that make daily driving safer and more comfortable — without the guesswork or the upsell.</p>
+      </div>
+
+      <div class="mv-card reveal">
+        <span class="mv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="8.5"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </span>
+        <h3>Our Vision</h3>
+        <p>To become the most trusted name in car accessories across India — known as much for straightforward honesty as for product quality.</p>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+      <div class="section-head">
+        <p class="eyebrow">What We Stand For</p>
+        <h2>Our Values</h2>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3>Genuine Quality</h3>
+          <p>Every product is tested before it's listed. No exceptions, no shortcuts.</p>
+        </div>
+
+        <div class="value-card reveal">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3>Customer First</h3>
+          <p>Real people answer your questions — not a script, not a bot loop.</p>
+        </div>
+
+        <div class="value-card reveal">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="8.5"/>
+              <path d="M12 7v5l3.2 2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3>Built for Real Drivers</h3>
+          <p>We source for daily use, not showroom photos — things that hold up to actual roads.</p>
+        </div>
+
+        <div class="value-card reveal">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3v2M12 19v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M3 12h2M19 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+          </span>
+          <h3>Honest Pricing</h3>
+          <p>The price you see is the price you pay — no inflated "discounts" to chase.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section">
+      <div class="section-head">
+        <p class="eyebrow">How We Got Here</p>
+        <h2>Our Journey</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2019</span>
+            <h3>Founded</h3>
+            <p>AutoGear Pro launches with a small interior accessories catalog, tested on the founders' own cars.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2021</span>
+            <h3>Catalog Expands</h3>
+            <p>Exterior and electronics categories are added as demand grows beyond interior accessories.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <h3>10,000 Orders Shipped</h3>
+            <p>AutoGear Pro crosses 10,000 orders shipped nationwide, with safety accessories joining the catalog.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h3>Today</h3>
+            <p>Four core categories, hundreds of products, and the same driver-first standards we started with.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- STATISTICS -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="10000" data-suffix="+">0</span>
+          <span class="stat-label">Drivers Served</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="300" data-suffix="+">0</span>
+          <span class="stat-label">Products Available</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="4" data-suffix="">0</span>
+          <span class="stat-label">Core Categories</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="7" data-suffix="">0</span>
+          <span class="stat-label">Years on the Road</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-section">
+      <div class="section-head">
+        <p class="eyebrow">Why Choose Us</p>
+        <h2>What Sets Us Apart</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <span class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Genuine Parts Only</h3>
+            <p>No knockoffs, no unverified sellers — every listing is checked before it goes live.</p>
+          </div>
+        </div>
+
+        <div class="why-item reveal">
+          <span class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 12h13M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Fast Dispatch</h3>
+            <p>Orders ship within 24 hours on business days — no waiting a week to hear a status update.</p>
+          </div>
+        </div>
+
+        <div class="why-item reveal">
+          <span class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 12a9 9 0 1 0 3-6.7" stroke-linecap="round"/>
+              <path d="M3 4v5h5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div>
+            <h3>7-Day Easy Returns</h3>
+            <p>If it doesn't fit or isn't right, send it back — no interrogation, no restocking games.</p>
+          </div>
+        </div>
+
+        <div class="why-item reveal">
+          <span class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Real Human Support</h3>
+            <p>Questions get answered by someone who actually knows the catalog, not a canned reply.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM (PLACEHOLDER) -->
+    <section class="team-section">
+      <div class="section-head">
+        <p class="eyebrow">The People Behind It</p>
+        <h2>Meet the Team</h2>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <span class="team-avatar" aria-hidden="true">AK</span>
+          <h3>Founder &amp; CEO</h3>
+          <p class="team-role">Product sourcing &amp; operations</p>
+        </div>
+
+        <div class="team-card reveal">
+          <span class="team-avatar" aria-hidden="true">PN</span>
+          <h3>Head of Operations</h3>
+          <p class="team-role">Logistics &amp; fulfillment</p>
+        </div>
+
+        <div class="team-card reveal">
+          <span class="team-avatar" aria-hidden="true">SR</span>
+          <h3>Customer Support Lead</h3>
+          <p class="team-role">Orders, returns &amp; questions</p>
+        </div>
+      </div>
+
+      <p class="team-note">Full team profiles and photos coming soon.</p>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <div class="cta-banner-inner">
+        <h2>Ready to gear up with us?</h2>
+        <p>Browse the full catalog and see why thousands of drivers stick with AutoGear Pro.</p>
+        <a href="products.html" class="btn btn-primary">Browse Products</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">AUTOGEAR</span><span class="logo-sub">PRO</span>
+        </a>
+        <p>Genuine parts and accessories for drivers who use their cars, not just park them.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="AutoGear Pro on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46H16.5V4.35C16.2 4.31 15.2 4.2 14 4.2c-2.4 0-4 1.46-4 4.16V10.5H7.5v3H10V21h3.5Z"/></svg>
+          </a>
+          <a href="#" aria-label="AutoGear Pro on Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.8A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1Z"/></svg>
+          </a>
+          <a href="#" aria-label="AutoGear Pro on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.7 0 3.1 0 4.1.06 1.1.05 1.9.24 2.5.5.7.28 1.2.65 1.8 1.2.5.56.9 1.1 1.2 1.8.26.6.45 1.4.5 2.5.05 1 .06 1.4.06 4.1s0 3.1-.06 4.1c-.05 1.1-.24 1.9-.5 2.5a5 5 0 0 1-1.2 1.8c-.56.5-1.1.9-1.8 1.2-.6.26-1.4.45-2.5.5-1 .05-1.4.06-4.1.06s-3.1 0-4.1-.06c-1.1-.05-1.9-.24-2.5-.5a5 5 0 0 1-1.8-1.2 5 5 0 0 1-1.2-1.8c-.26-.6-.45-1.4-.5-2.5C2 15.1 2 14.7 2 12s0-3.1.06-4.1c.05-1.1.24-1.9.5-2.5.28-.7.65-1.2 1.2-1.8.56-.5 1.1-.9 1.8-1.2.6-.26 1.4-.45 2.5-.5C8.9 2 9.3 2 12 2Zm0 1.8c-2.66 0-2.97 0-4.02.06-.9.04-1.4.2-1.7.33-.44.17-.75.38-1.08.7-.32.33-.53.64-.7 1.08-.13.3-.29.8-.33 1.7C4.1 8.9 4.1 9.21 4.1 12s0 2.97.06 4.02c.04.9.2 1.4.33 1.7.17.44.38.75.7 1.08.33.32.64.53 1.08.7.3.13.8.29 1.7.33 1.05.06 1.36.06 4.02.06s2.97 0 4.02-.06c.9-.04 1.4-.2 1.7-.33.44-.17.75-.38 1.08-.7.32-.33.53-.64.7-1.08.13-.3.29-.8.33-1.7.06-1.05.06-1.36.06-4.02s0-2.97-.06-4.02c-.04-.9-.2-1.4-.33-1.7a2.9 2.9 0 0 0-.7-1.08 2.9 2.9 0 0 0-1.08-.7c-.3-.13-.8-.29-1.7-.33C14.97 3.8 14.66 3.8 12 3.8Zm0 3.1a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 1.8a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6Zm5.3-2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Shop by Category</h3>
+        <ul>
+          <li><a href="products.html?category=interior">Interior</a></li>
+          <li><a href="products.html?category=exterior">Exterior</a></li>
+          <li><a href="products.html?category=electronics">Electronics</a></li>
+          <li><a href="products.html?category=safety">Safety</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-newsletter">
+        <h3>Stay Updated</h3>
+        <p>New arrivals and offers, once in a while — no spam.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <label for="newsletterEmail" class="visually-hidden">Email address</label>
+          <div class="newsletter-input-row">
+            <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Your email address" aria-describedby="newsletterError" required>
+            <button type="submit" class="btn btn-primary newsletter-submit">Subscribe</button>
+          </div>
+          <span class="form-error" id="newsletterError"></span>
+        </form>
+      </div>
+    </div>
+
+    <p class="footer-bottom">&copy; <span id="footerYear">2026</span> AutoGear Pro. All rights reserved.</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
