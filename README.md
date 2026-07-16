@@ -3,8 +3,7 @@
 A car accessories e-commerce front end built with plain HTML, CSS, and JavaScript — no frameworks, no build tools. Four pages, a shared design system, working product search and filtering, and a live contact form powered by EmailJS.
 
 **Live demo:** 
-
----
+https://garima-maurya.github.io/car_accessories_website/
 
 ## Features
 
@@ -79,6 +78,3 @@ Works in all current versions of Chrome, Firefox, Safari, and Edge. Uses modern 
 - No backend — cart, orders, and newsletter signups are not persisted anywhere beyond the browser
 - Product data is hardcoded into `products.html` rather than loaded from a JSON file or API
 
-## Author
-
-Garima Maurya — [github.com/garima-maurya](https://github.com/garima-maurya)
